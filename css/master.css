@@ -179,13 +179,116 @@ html {
   font-size: 100%;
 }
 body {
-  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  color: #555;
+  font-family: "Open Sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  color: #242424;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-size-adjust: auto;
 }
-body {
-  padding: 50px;
+a {
+  color: #38b78b;
+  text-decoration: none;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  border-bottom: 1px solid;
+}
+a:hover {
+  color: #309c76;
+}
+a:visited {
+  opacity: 0.8;
+}
+.btn {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #38b78b;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Open Sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.btn:hover,
+.btn:focus {
+  background-color: #35ae84;
+  color: #f7f7f7;
+}
+.btn:active {
+  background-color: #32a57d;
+}
+a.btn {
+  border: none;
+  text-decoration: none;
+  color: initial;
+  color: #fff;
+}
+a.btn:hover {
+  border: none;
+  text-decoration: none;
+  color: initial;
+}
+a.btn:visited {
+  opacity: 1;
+}
+a.btn:hover {
+  color: #fff;
+}
+nav,
+header,
+article,
+section,
+footer {
+  padding: 0 18vw;
+}
+nav {
+  position: absolute;
+  height: 5em;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+nav:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+nav .logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto 0;
+}
+header {
+  height: 53vw;
+  color: #fff;
+  background: url("/img/background.jpg") center/100% auto;
+}
+@media only screen and (min-resolution: 1.5dppx), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  header {
+    background: url("/img/background@2x.jpg") center/100% auto;
+  }
+}
+header h1 {
+  padding-top: 18vw;
+  margin-top: 0;
+}
+section,
+article {
+  padding: 4em 18vw 0;
+}
+footer {
+  padding: 8em 18vw 2em;
 }
