@@ -253,6 +253,15 @@ section,
 footer {
   padding: 0 18vw;
 }
+@media only screen and (max-width: 400px) {
+  nav,
+  header,
+  article,
+  section,
+  footer {
+    padding: 0 6vw;
+  }
+}
 nav {
   position: absolute;
   height: 5em;
@@ -271,6 +280,11 @@ nav .logo {
   vertical-align: middle;
   margin: auto 0;
 }
+@media only screen and (max-width: 400px) {
+  nav {
+    padding-left: 33vw;
+  }
+}
 header {
   height: 53vw;
   color: #fff;
@@ -285,9 +299,20 @@ header h1 {
   padding-top: 18vw;
   margin-top: 0;
 }
+@media only screen and (max-width: 400px) {
+  header h1 {
+    padding-top: 4vw;
+  }
+}
 section,
 article {
   padding: 4em 18vw 0;
+}
+@media only screen and (max-width: 400px) {
+  section,
+  article {
+    padding: 2em 6vw 0;
+  }
 }
 footer {
   padding: 8em 18vw 2em;
