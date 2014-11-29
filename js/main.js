@@ -3,7 +3,7 @@ var Pipedrive, superagent;
 
 superagent = require('superagent');
 
-Pipedrive = (function() {
+module.exports = Pipedrive = (function() {
   function Pipedrive(formId) {
     this.threshold = 500;
     this.timeout = 5000;
@@ -101,11 +101,30 @@ Pipedrive.prototype._updated = function(storedVersion) {
   };
 };
 
+
+
+},{"superagent":3}],2:[function(require,module,exports){
+var Pipedrive, backgroundImage, header, img;
+
+Pipedrive = window.Pipedrive = require('./Pipedrive');
+
 new Pipedrive('invitation');
 
+header = document.getElementsByTagName('header')[0];
+
+backgroundImage = getComputedStyle(header, ':before').backgroundImage.slice(4, -1);
+
+img = new Image;
+
+img.src = backgroundImage;
+
+img.onload = function() {
+  return header.className += 'ready';
+};
 
 
-},{"superagent":2}],2:[function(require,module,exports){
+
+},{"./Pipedrive":1}],3:[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -1188,7 +1207,7 @@ request.put = function(url, data, fn){
 
 module.exports = request;
 
-},{"emitter":3,"reduce":4}],3:[function(require,module,exports){
+},{"emitter":4,"reduce":5}],4:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -1354,7 +1373,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 
 /**
  * Reduce `arr` with `fn`.
@@ -1379,4 +1398,4 @@ module.exports = function(arr, fn, initial){
   
   return curr;
 };
-},{}]},{},[1]);
+},{}]},{},[2]);
